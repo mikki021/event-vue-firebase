@@ -15,7 +15,7 @@
 
     <v-app-bar app color="light-blue darken-3" dark>
       <v-app-bar-nav-icon
-        class="d-flex d-sm-none"
+        class="d-flex d-md-none"
         @click.stop="drawer = !drawer"
       />
       <v-toolbar-title>Event app</v-toolbar-title>
@@ -25,7 +25,7 @@
         v-for="(menuItem, index) in menuItems"
         :key="index"
         text
-        class="d-none d-sm-flex"
+        class="d-none d-md-flex"
       >
         <v-icon left>{{ menuItem.icon }}</v-icon>
         {{ menuItem.title }}
@@ -50,6 +50,14 @@ export default {
       profile: {
         icon: "mdi-account",
         title: "Profile"
+      },
+      signUp: {
+        icon: "mdi-face",
+        title: "Sign Up"
+      },
+      signIn: {
+        icon: "mdi-lock",
+        title: "Sign In"
       }
     }
   })
