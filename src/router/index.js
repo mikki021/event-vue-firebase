@@ -4,7 +4,6 @@ import Home from "../components/Home.vue";
 import { EventList, CreateEvent } from "../components/event";
 import { Profile, SignIn, SignUp } from "../components/user";
 
-
 Vue.use(VueRouter);
 
 const routes = [
@@ -37,7 +36,7 @@ const routes = [
     path: "/sign-up",
     name: "Sign Up",
     component: SignUp
-  },
+  }
 ];
 
 const router = new VueRouter({
