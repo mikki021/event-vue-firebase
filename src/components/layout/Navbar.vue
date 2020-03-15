@@ -27,7 +27,6 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
 
-
       <v-btn
         v-for="(menuItem, index) in menuItems"
         :key="index"
