@@ -7,16 +7,18 @@
     delimiter-icon="mdi-minus"
   >
     <v-carousel-item
-      v-for="(slide, i) in slides"
+      v-for="(item, i) in slides"
       :key="i"
-      :src="slide.img"
-      :to="'/events/' + slide.id"
+      :to="'/events/' + item.id"
     >
-      <v-row class="fill-height" align="bottom" justify="center">
-        <div class="display-3 pt-6">
-          <h3>{{ slide.title }} Slide</h3>
-        </div>
-      </v-row>
+      <v-sheet height="100%" class="transparent">
+        <v-row align="top" justify="center" class="light-blue darken-4 pa-2">
+          <div align="center" elevation="2" class="display-3 font-weight-light">{{ item.title.toUpperCase() }}</div>
+        </v-row>
+        <v-row class="fill-height">
+          <v-img :src="item.img"></v-img>
+        </v-row>
+      </v-sheet>
     </v-carousel-item>
   </v-carousel>
 </template>
